@@ -13,6 +13,7 @@ import { CartService } from '../../../shared/services/cart.service';
 export class ProductDetailsComponent implements OnInit {
   products: Product[] = [];
   product: Product | null | undefined = null;
+  argument2: any
 
   constructor(
     private _productsService: ProductsService,
@@ -28,6 +29,7 @@ export class ProductDetailsComponent implements OnInit {
     const routeParams = this._route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
 
+    this.argument2 = routeParams.get('argument2')
     this.products = this._productsService.getProducts();
     this.product = this.products.find(
       (product) => product.id === productIdFromRoute

@@ -37,6 +37,7 @@ const routes: Routes = [
   },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  { path: 'products/:productId/:argument2',component: ProductDetailsComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
