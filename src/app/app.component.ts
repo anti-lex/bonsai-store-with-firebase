@@ -55,6 +55,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this._cartSubscription = this.cart.subscribe((cart) => {
       this.itemCount = cart.items
         .map((x) => x.quantity)
+
+
         
         .reduce((p, n) => p + n, 0);
     });
