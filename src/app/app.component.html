@@ -47,7 +47,11 @@
   <img class="brand-logo" src="assets/brand-logo.svg" alt="brand Logo">
   <span>Bonsai Store App</span>
   <span class="spacer"></span>
-  Number of unique items {{ uniqueItem }}
+
+  <div *ngIf="authService.isLoggedIn">
+    Number of unique items {{ uniqueItem }}
+  </div>
+  
   <button
     *ngIf="authService.isLoggedIn"
     class="button"
